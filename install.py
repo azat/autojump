@@ -105,10 +105,6 @@ def parse_arguments():  # noqa
                 print("System-wide installation is not supported on Windows.",
                       file=sys.stderr)
                 sys.exit(1)
-            elif os.geteuid() != 0:
-                print("Please rerun as root for system-wide installation.",
-                      file=sys.stderr)
-                sys.exit(1)
 
         if platform.system() != 'Windows' \
                 and get_shell() not in SUPPORTED_SHELLS:
